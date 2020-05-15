@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C6A5023246EFA8E003928D2 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A5022246EFA8E003928D2 /* icon2.png */; };
 		9C799205246E2D69002F84FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C799204246E2D69002F84FA /* AppDelegate.swift */; };
 		9C799207246E2D69002F84FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C799206246E2D69002F84FA /* SceneDelegate.swift */; };
 		9C799209246E2D69002F84FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C799208246E2D69002F84FA /* ViewController.swift */; };
@@ -15,8 +16,6 @@
 		9C799211246E2D6B002F84FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79920F246E2D6B002F84FA /* LaunchScreen.storyboard */; };
 		9C79921C246E2D6C002F84FA /* MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C79921B246E2D6C002F84FA /* MazeTests.swift */; };
 		9C799227246E2D6C002F84FA /* MazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C799226246E2D6C002F84FA /* MazeUITests.swift */; };
-		9C799235246E54E8002F84FA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C799234246E54E8002F84FA /* icon.png */; };
-		9C799239246E5D3F002F84FA /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C799238246E5D3F002F84FA /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C6A5022246EFA8E003928D2 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		9C799201246E2D69002F84FA /* 迷路ゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "迷路ゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C799204246E2D69002F84FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C799206246E2D69002F84FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +51,6 @@
 		9C799222246E2D6C002F84FA /* MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C799226246E2D6C002F84FA /* MazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeUITests.swift; sourceTree = "<group>"; };
 		9C799228246E2D6C002F84FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C799234246E54E8002F84FA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		9C799238246E5D3F002F84FA /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = ../../ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +81,7 @@
 		9C7991F8246E2D68002F84FA = {
 			isa = PBXGroup;
 			children = (
+				9C6A5022246EFA8E003928D2 /* icon2.png */,
 				9C799203246E2D69002F84FA /* Maze */,
 				9C79921A246E2D6C002F84FA /* MazeTests */,
 				9C799225246E2D6C002F84FA /* MazeUITests */,
@@ -103,12 +102,10 @@
 		9C799203246E2D69002F84FA /* Maze */ = {
 			isa = PBXGroup;
 			children = (
-				9C799234246E54E8002F84FA /* icon.png */,
 				9C799204246E2D69002F84FA /* AppDelegate.swift */,
 				9C799206246E2D69002F84FA /* SceneDelegate.swift */,
 				9C799208246E2D69002F84FA /* ViewController.swift */,
 				9C79920A246E2D69002F84FA /* Main.storyboard */,
-				9C799238246E5D3F002F84FA /* ball.png */,
 				9C79920D246E2D6B002F84FA /* Assets.xcassets */,
 				9C79920F246E2D6B002F84FA /* LaunchScreen.storyboard */,
 				9C799212246E2D6B002F84FA /* Info.plist */,
@@ -238,11 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C799235246E54E8002F84FA /* icon.png in Resources */,
-				9C799239246E5D3F002F84FA /* ball.png in Resources */,
 				9C799211246E2D6B002F84FA /* LaunchScreen.storyboard in Resources */,
 				9C79920E246E2D6B002F84FA /* Assets.xcassets in Resources */,
 				9C79920C246E2D69002F84FA /* Main.storyboard in Resources */,
+				9C6A5023246EFA8E003928D2 /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DC67NVFSC;
 				INFOPLIST_FILE = Maze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DC67NVFSC;
 				INFOPLIST_FILE = Maze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

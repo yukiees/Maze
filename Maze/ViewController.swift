@@ -19,16 +19,16 @@ class ViewController: UIViewController {
     let screenSize = UIScreen.main.bounds.size
     
     let maze = [
-        [1, 0, 0, 0, 1, 0],
-        [1, 0, 0, 0, 1, 0],
-        [3, 0, 1, 0, 1, 0],
-        [1, 1, 1, 0, 0, 0],
-        [1, 0, 0, 1, 1, 0],
+        [1, 1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 1],
+        [3, 0, 1, 0, 1, 1],
+        [1, 1, 0, 0, 1, 1],
+        [1, 0, 0, 1, 0, 1],
+        [0, 0, 0, 1, 0, 1],
+        [0, 1, 1, 1, 0, 1],
+        [0, 1, 1, 1, 0, 1],
         [0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 1, 1, 0],
-        [0, 0, 0, 0, 0, 1],
-        [0, 1, 1, 0, 0, 0],
-        [0, 0, 1, 1, 1, 2],
+        [1, 1, 1, 1, 1, 2],
     ]
     
     var startView: UIView!
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             switch maze[y][x]{
             case 1:
                 let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
-                wallView.backgroundColor = UIColor.black
+                wallView.backgroundColor = UIColor.red
                 view.addSubview(wallView)
                 wallRectArray.append(wallView.frame)
                 
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                 
             case 3:
                 goalView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
-                goalView.backgroundColor = UIColor.red
+                goalView.backgroundColor = UIColor.blue
                 view.addSubview(goalView)
 
             default:
@@ -70,13 +70,13 @@ class ViewController: UIViewController {
             }
             }
         }
-        playerView = UIView(frame: CGRect(x: 0, y: 0, width: cellWidth / 3, height: cellHeight / 2))
+        playerView = UIView(frame: CGRect(x: 0, y: 0, width: cellWidth / 2, height: cellHeight / 6))
         playerView.center = startView.center
         playerView.backgroundColor = UIColor.red
         view.addSubview(playerView)
         
         playerMotionManager = CMMotionManager()
-        playerMotionManager.accelerometerUpdateInterval = 0.10
+        playerMotionManager.accelerometerUpdateInterval = 0.07
         
         startAccelerometer()
     }
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
     }
     
     func startAccelerometer(){
-        let _: CMAccelerometerHandler = {(CMAccelerometerData: CMAccelerometerData?, error: Error?) -> Void in
+        let handler: CMAccelerometerHandler = {(CMAccelerometerData: CMAccelerometerData?, error: Error?) -> Void in
             self.speedX += CMAccelerometerData!.acceleration.x
             self.speedY += CMAccelerometerData!.acceleration.y
             
@@ -132,6 +132,7 @@ class ViewController: UIViewController {
             
             self.playerView.center = CGPoint(x: posX, y: posY)
         }
+        playerMotionManager.startAccelerometerUpdates(to: OperationQueue.main, withHandler: handler)
     }
     
     func gameCheck(result: String, message: String){
