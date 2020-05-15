@@ -15,6 +15,8 @@
 		9C799211246E2D6B002F84FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79920F246E2D6B002F84FA /* LaunchScreen.storyboard */; };
 		9C79921C246E2D6C002F84FA /* MazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C79921B246E2D6C002F84FA /* MazeTests.swift */; };
 		9C799227246E2D6C002F84FA /* MazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C799226246E2D6C002F84FA /* MazeUITests.swift */; };
+		9C799235246E54E8002F84FA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C799234246E54E8002F84FA /* icon.png */; };
+		9C799239246E5D3F002F84FA /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C799238246E5D3F002F84FA /* ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C799201246E2D69002F84FA /* Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C799201246E2D69002F84FA /* 迷路ゲーム.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "迷路ゲーム.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C799204246E2D69002F84FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C799206246E2D69002F84FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C799208246E2D69002F84FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		9C799222246E2D6C002F84FA /* MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C799226246E2D6C002F84FA /* MazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeUITests.swift; sourceTree = "<group>"; };
 		9C799228246E2D6C002F84FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C799234246E54E8002F84FA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9C799238246E5D3F002F84FA /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = ../../ball.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,7 @@
 		9C799202246E2D69002F84FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C799201246E2D69002F84FA /* Maze.app */,
+				9C799201246E2D69002F84FA /* 迷路ゲーム.app */,
 				9C799217246E2D6C002F84FA /* MazeTests.xctest */,
 				9C799222246E2D6C002F84FA /* MazeUITests.xctest */,
 			);
@@ -99,10 +103,12 @@
 		9C799203246E2D69002F84FA /* Maze */ = {
 			isa = PBXGroup;
 			children = (
+				9C799234246E54E8002F84FA /* icon.png */,
 				9C799204246E2D69002F84FA /* AppDelegate.swift */,
 				9C799206246E2D69002F84FA /* SceneDelegate.swift */,
 				9C799208246E2D69002F84FA /* ViewController.swift */,
 				9C79920A246E2D69002F84FA /* Main.storyboard */,
+				9C799238246E5D3F002F84FA /* ball.png */,
 				9C79920D246E2D6B002F84FA /* Assets.xcassets */,
 				9C79920F246E2D6B002F84FA /* LaunchScreen.storyboard */,
 				9C799212246E2D6B002F84FA /* Info.plist */,
@@ -145,7 +151,7 @@
 			);
 			name = Maze;
 			productName = Maze;
-			productReference = 9C799201246E2D69002F84FA /* Maze.app */;
+			productReference = 9C799201246E2D69002F84FA /* 迷路ゲーム.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9C799216246E2D6C002F84FA /* MazeTests */ = {
@@ -232,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C799235246E54E8002F84FA /* icon.png in Resources */,
+				9C799239246E5D3F002F84FA /* ball.png in Resources */,
 				9C799211246E2D6B002F84FA /* LaunchScreen.storyboard in Resources */,
 				9C79920E246E2D6B002F84FA /* Assets.xcassets in Resources */,
 				9C79920C246E2D69002F84FA /* Main.storyboard in Resources */,
@@ -437,12 +445,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DC67NVFSC;
 				INFOPLIST_FILE = Maze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Maze;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Count;
+				PRODUCT_NAME = "迷路ゲーム";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,12 +464,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DC67NVFSC;
 				INFOPLIST_FILE = Maze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Maze;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = app.matsushima.mukku.Count;
+				PRODUCT_NAME = "迷路ゲーム";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
